@@ -1,35 +1,18 @@
-import java.util.Arrays;
+public class nodeIntersect{
+	public static void main(String[] args){
 
-public class sumLists{
-    public static void main(String[] args){
-        LinkedList a = new LinkedList();
-        LinkedList b = new LinkedList();
+	}
 
-        a.append(7);
-        a.append(6);
-        a.append(3); 
-        
-        // LinkedList a contains 367
-
-        b.append(3);
-        b.append(8);
-        b.append(2);
-
-        // LinkedList b contains 283
-
-        System.out.println(getSum(a,b));
-    }
-
-    public static LinkedList getSum(LinkedList a, LinkedList b){
-        int sum = a.backInt() + b.backInt();
-        LinkedList listSum = new LinkedList();
-
-        while(sum > 0){
-            listSum.append(sum % 10);
-            sum = sum/10;
-        }
-        return listSum;
-    }
+	public boolean nodeIntersect(LinkedList a, LinkedList b){
+		for(int i = 0; i< a.size(); i++){
+			for(int j = 0; j< b.size(); j++){
+				if(a.nodeByIndex(i) == b.nodeByIndex(j)){
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 }
 
 class LinkedList{
@@ -77,6 +60,15 @@ class LinkedList{
                 moreThan[j].next = moreThan[j + 1];
             }
         }
+    }
+
+    public Node nodeByIndex(int index){
+    	Node a = head;
+
+    	for(int i = 0; i< index; i++){
+    		a = a.next;
+    	}
+    	return a;
     }
 
     public int backInt(){
