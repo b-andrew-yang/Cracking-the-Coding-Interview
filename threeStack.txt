@@ -1,0 +1,7 @@
+To design three stacks using a single array
+	Split the array into three sections
+	Have a separator at the end each of the sections such as -1
+		This separator denotes the different sections.
+	Have three indices remembering where the separators are.
+	When pushing onto the stack add to the respective (indices - 1)
+	When popping or pushing we shift all of the units over left or right accordingly.
