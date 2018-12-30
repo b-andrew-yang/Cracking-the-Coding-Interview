@@ -1,0 +1,15 @@
+Stack Min:
+	How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element?
+	Push, pop and min should all operate in O(1) time.
+
+	Solution: 
+		I would create the stack using a linked list with the head being the last element of the list.
+		Then I would create two variables,
+			One that keeps track of the index of the last element (head),
+				(Could also just use LinkedList.size()-1 here)
+			Another that keeps track of the index of the min element
+		Push could be implemented in O(1) time by just adding the element to the back of the linked list.
+		Pop would also be implemented in O(1) time by copying the last element, removing it, and returning the copy.
+			I would also update the last index by subtracting one.
+		Min would be implemented by removing the element at the index of the min element using LinkedList.get(minIndex).
+			The last index would be updated by subtracting one.
