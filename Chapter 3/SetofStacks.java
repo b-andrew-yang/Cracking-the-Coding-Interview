@@ -30,7 +30,7 @@ public class SetofStacks<T>{
 			currStack = 0;
 		}else{
 			MyStack<T> tmpStack = setOfStacks.get(numStack - 1);
-			tmpStack.add(data);
+			tmpStack.push(data);
 			currStack++;
 		}
 	}
