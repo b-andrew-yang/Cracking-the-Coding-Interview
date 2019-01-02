@@ -1,5 +1,7 @@
 package chapter3;
 
+import java.util.IllegalArgumentException;
+
 public class AnimalShelter{
 	private static AnimalShelter shelter = new AnimalShelter();
 	private LinkedList<Animal> inventory;
@@ -26,9 +28,10 @@ public class AnimalShelter{
 				Animals temp = a;
 				inventory.remove(inventory.indexOf(a));
 				return temp;
+			}else{
+				throw new IllegalArgumentException("No dogs available");
 			}
 		}
-		System.out.println("No dogs available");
 	}
 
 	public Animals dequeueCat(){
@@ -37,8 +40,9 @@ public class AnimalShelter{
 				Animals temp = a;
 				inventory.remove(inventory.indexOf(a));
 				return temp;
+			}else{
+				throw new IllegalArgumentException("No cats available");
 			}
 		}
-		System.out.println("No cats available");
 	}
 }
