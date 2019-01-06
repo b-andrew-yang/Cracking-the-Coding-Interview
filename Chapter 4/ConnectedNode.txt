@@ -1,0 +1,4 @@
+Given a directed graph:
+	Conduct either DFS or BFS to find a potential route between two nodes.
+	If we can reach destination, then a path exists.
+	If not then, no path exists.
